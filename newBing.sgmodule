@@ -1,0 +1,10 @@
+#!name=NewBing
+#!desc=解锁非edge浏览器访问 New Bing 聊天模式
+# 仓库地址 https://github.com/cyqlegend/surgeTool.git
+# 前置条件：已获得New Bing资格
+
+[Header Rewrite]
+^http(s?)://(.*).bing\.com/(.*) header-replace User-Agent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.41"
+
+[MITM]
+hostname = %APPEND%  *.bing.com
